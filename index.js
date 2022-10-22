@@ -7,11 +7,11 @@ const pendingList = document.getElementById("pendingList");
 addbtn.addEventListener("click", () => {
   if (input.value != "") {
     //declaring and adding new task
-    var newTodo = document.createElement("div");
-    newTodo.classList.add("bg-slate-200", "mx-3", "my-1", "p-2");
-    newTodo.innerHTML = `<li class="flex flex-1 p-2 capitalize">${input.value}</li> `;
+    var newtask = document.createElement("div");
+    newtask.classList.add("bg-slate-200", "mx-3", "my-1", "p-2");
+    newtask.innerHTML = `<li class="flex flex-1 p-2 capitalize">${input.value}</li> `;
     input.value = "";
-    pendingList.appendChild(newTodo);
+    pendingList.appendChild(newtask);
     //moving pending task to completed
   } else {
     alert("Please input new task!");
