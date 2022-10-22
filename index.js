@@ -1,5 +1,3 @@
-const get = document.getElementById;
-
 const addbtn = document.getElementById("addbtn");
 const input = document.getElementById("input");
 const pendingList = document.getElementById("pendingList");
