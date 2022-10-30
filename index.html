@@ -13,65 +13,52 @@
       src="https://kit.fontawesome.com/33938235e4.js"
       crossorigin="anonymous"
     ></script>
-    <script
-      defer
-      src="https://github.com/itsmecedy/TodoList.git/app.js"
-    ></script>
+    <script defer src="./app.js"></script>
     <title>Document</title>
   </head>
-  <body
-    class="bg-slate-200 flex justify-center items-center h-screen font-[poppins]"
-  >
-    <!-- main content -->
-    <main class="bg-white h-5/6 m-5 rounded">
-      <div>
-        <div class="flex justify-center">
-          <label class="text-2xl font-bold font-[poppins] mt-2"
-            >Todo list</label
+  <body>
+    <div
+      class="bg-slate-200 flex justify-center items-center h-screen font-[poppins]"
+    >
+      <main class="bg-white md:h-5/6 max-w-xl h-full w-full md:rounded-md">
+        <h2 class="text-4xl mt-10 flex justify-center font-semibold">
+          Todo list
+        </h2>
+        <div class="my-4 flex justify-center space-x-5">
+          <!-- input button-->
+          <input
+            type="text"
+            id="input"
+            placeholder="What do you have planned?"
+            class="bg-slate-100 hover:bg-slate-200 w-3/4 outline-none pl-2 py-1 border-2 rounded-md capitalize"
+          />
+          <!-- add button -->
+          <button
+            id="addBtn"
+            class="bg-blue-600 text-white p-1 rounded hover:bg-blue-700"
           >
+            Add
+          </button>
         </div>
-        <div class="flex justify-center">
-          <!-- add todo list -->
-          <div class="mx-2 my-4 flex justify-between space-x-1">
-            <!-- input -->
-            <input
-              type="text"
-              id="input"
-              class="bg-slate-100 hover:bg-slate-200 outline-none p-1 border-2 rounded capitalize"
-            />
-            <!-- add button -->
-            <button
-              id="addbtn"
-              class="bg-blue-600 text-white p-1 rounded hover:bg-blue-700"
-            >
-              Add
-            </button>
-          </div>
-        </div>
-        <!-- Todo list section -->
         <section id="=todoContainer">
-          <label class="flex justify-center font-semibold">Pending list</label>
-          <!-- pending list -->
-          <div id="pendingList">
-            <div id="listEl" class="bg-slate-200 mx-3 my-1 p-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-              ea.
+          <label class="flex justify-center text-lg mt-5">Pending Task</label>
+          <!-- pending list task -->
+          <div id="pendingTask">
+            <div
+              id="listEl"
+              class="bg-slate-200 mx-3 my-1 p-2 flex-col group capitalize italic text-center rounded"
+            >
+              Stay positive. work hard.make it happen.
             </div>
           </div>
+          <!-- completed task -->
+          <label class="flex justify-center text-lg mt-10"
+            >Completed Task
+          </label>
+          <div id="completedTask"></div>
         </section>
-        <!-- Completed list section -->
-        <section>
-          <label class="flex justify-center font-semibold">
-            Completed list</label
-          >
-          <div class="completedList">
-            <div class="bg-slate-200 mx-3 my-1 p-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-              ea.
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+      </main>
+    </div>
+    <!-- ------------------------Cedrick cutie--------------------------- -->
   </body>
 </html>
