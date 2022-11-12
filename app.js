@@ -4,7 +4,7 @@ const pendingTask = document.getElementById("pendingTask");
 const completedTask = document.getElementById("completedTask");
 
 //add task by clicking add
-const addTask = addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
   if (input.value != "") {
     //declaring and adding new task
     var newTask = document.createElement("div");
@@ -65,24 +65,13 @@ const addTask = addBtn.addEventListener("click", () => {
     input.value = "";
   } else {
     alert("Please input new task!");
-    return;
   }
 
   //edit func /edit
   edit.addEventListener("click", () => {
     edit.parentNode.parentNode.parentNode.remove();
-    input.focus();
     input.value = taskValue;
-
-    input.addEventListener("focusout", () => {
-      alert("Please finish your task name!");
-    });
-
-    // if (!input.onfocusout) {
-    //   alert("success");
-    // } else {
-    //   alert("Please complete your task name!");
-    // }
+    input.focus();
   });
 
   //Done func /move pending task to completed task
@@ -90,19 +79,12 @@ const addTask = addBtn.addEventListener("click", () => {
     completedTask.appendChild(done.parentNode.parentNode.parentNode);
     done.parentNode.parentNode.remove();
   });
-
-  // delete task
-  // done.addEventListener("click", () => {
-  //   console.log("test");
-  //   done.parentNode.parentNode.parentNode.remove();
-  // });
 });
 
 ///////////////////////////////////////////////
 //add task using enter key
-const enterTask = input.addEventListener("keypress", function (e) {
+input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     addBtn.click();
-    return;
   }
 });
